@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService, UserDetailsService, Applica
 
     @Override
     public int delete(long id) {
-        if (userRepository.findById(id).isEmpty()) return 0;
+        if (!userRepository.findById(id).isPresent()) return 0;
         userRepository.delete(userRepository.findById(id).get());
         return 1;
     }
