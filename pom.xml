@@ -73,6 +73,15 @@
             <artifactId>spring-boot-starter-validation</artifactId>
             <version>2.7.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jboss.spec/jboss-javaee-web-6.0 -->
+        <dependency>
+            <groupId>org.jboss.spec</groupId>
+            <artifactId>jboss-javaee-web-6.0</artifactId>
+            <version>3.0.3.Final</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
