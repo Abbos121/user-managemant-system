@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {
 
-
     @Value("${spring.sql.init.mode}")
     private String initMode;
 
@@ -28,7 +27,6 @@ public class DataLoader implements CommandLineRunner {
             User user = new User("star mafia", "star@gmail.com", new BCryptPasswordEncoder().encode("root"), true);
             user.setRegisteredDate(LocalDateTime.now().format(UserServiceImpl.dateTimeFormatter));
             userRepository.save(user);
-
         }
     }
 }
